@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "paperpal": {
+      "type": "http",
+      "url": "https://edit-connector.paperpal.com/mcp"
+    }
+  }
+}

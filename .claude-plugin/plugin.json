@@ -1,0 +1,27 @@
+{
+  "name": "paperpal",
+  "displayName": "Paperpal",
+  "version": "1.0.0",
+  "description": "Run Grammar, Plagiarism, Reference Checks, and Journal Fit with Paperpal, review results, and assess manuscript submission readiness.",
+  "author": {
+    "name": "Cactus Communications",
+    "email": "hello@paperpal.com",
+    "url": "https://paperpal.com"
+  },
+  "homepage": "https://paperpal.com",
+  "repository": "https://github.com/cactuscommunications/paperpal-mcp",
+  "license": "MIT",
+  "keywords": [
+    "academic-writing",
+    "manuscript",
+    "grammar",
+    "plagiarism",
+    "reference-checks",
+    "journal-fit"
+  ],
+  "icon": "./assets/paperpal.png",
+  "documentationUrl": "https://github.com/cactuscommunications/paperpal-mcp#readme",
+  "supportUrl": "https://support.paperpal.com/support/solutions",
+  "privacyPolicyUrl": "https://cactusglobal.com/privacy-policy/",
+  "termsOfServiceUrl": "https://cactusglobal.com/terms-of-use/"
+}
