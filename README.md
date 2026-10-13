@@ -1,6 +1,6 @@
 # Paperpal for Claude
 
-<img src="assets/paperpal.png" alt="Paperpal" width="88" />
+![Paperpal](assets/paperpal.png)
 
 Check an academic manuscript with Paperpal from Claude, review the findings, and decide what needs attention before submission. This plugin combines four Paperpal skills with a connection to Paperpal's hosted MCP service. Each person signs in with their own Paperpal account.
 
@@ -64,6 +64,7 @@ Local validation checks package structure. Authenticated tool calls and the inte
 
 ## Help and license
 
+- [Paperpal MCP documentation](https://enormous-feeling-067.notion.site/Paperpal-MCP-3ec00a63965c8048a76be191ac93a7ca)
 - [Paperpal Help Center](https://support.paperpal.com/support/solutions)
 - [Contact Paperpal](mailto:hello@paperpal.com)
 - [Paperpal website](https://paperpal.com)

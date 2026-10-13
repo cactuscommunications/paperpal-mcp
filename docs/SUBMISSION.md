@@ -1,6 +1,6 @@
 # Claude directory submission
 
-This repository is one plugin at the repository root. It packages the existing Paperpal skills and references the hosted Paperpal MCP server. It does not contain that server's implementation or OAuth credentials.
+This repository is one plugin at the repository root. It packages the existing Paperpal skills and references the hosted Paperpal MCP server. It does not contain that server's implementation or OAuth credentials. The package contains instructions, connection metadata, documentation, and a display logo. It has no executable scripts, hooks, local server commands, or code that reads credentials from the user's environment or files. The host handles Paperpal OAuth sign-in.
 
 ## Source fields
 
@@ -17,7 +17,9 @@ Open [Claude's developer portal](https://claude.ai/directory/manage), select **S
 
 Connect the GitHub account that has push access to the repository in the Claude organization that will own the listing. The repository is public. The portal reads listing fields from `.claude-plugin/plugin.json` and the description from `README.md`.
 
-Run **Validate** on the submitted commit and resolve any blocking findings. A local `claude plugin validate` pass does not establish directory name availability or a passing directory security scan.
+The listing's `documentationUrl` points to the public [Paperpal MCP documentation](https://enormous-feeling-067.notion.site/Paperpal-MCP-3ec00a63965c8048a76be191ac93a7ca).
+
+Run **Validate** on the submitted commit and resolve any blocking findings. Local validation checks package structure. Directory name availability and the directory security scan require the portal's checks.
 
 ## Pair the remote connector
 
@@ -48,7 +50,6 @@ Check that the package contains:
 .mcp.json
 README.md
 LICENSE
-assets/paperpal.png
 skills/check-manuscript/SKILL.md
 skills/review-results/SKILL.md
 skills/manuscript-readiness/SKILL.md
@@ -56,6 +57,10 @@ skills/paperpal-product-knowledge/SKILL.md
 ```
 
 All paths must stay inside the plugin. Commit regular files, not symlinks, submodules, or Git LFS pointer files. Publish readable source with no credentials, personal documents, or environment files.
+
+The manifest's icon is a display image rendered in the README using Markdown image syntax. No command, hook, or script runs the image. Keep bundled image paths out of command examples and package-inventory code blocks, as required by [Anthropic's file checks](https://claude.com/docs/plugins/pre-submission-checklist#files-in-the-plugin-folder).
+
+The directory uses `icon`, `documentationUrl`, `supportUrl`, `privacyPolicyUrl`, and `termsOfServiceUrl` for the listing. Claude Code ignores those fields at load time. Directory warnings identifying them as listing-only fields require no changes; retain the listing metadata. See the [manifest reference](https://code.claude.com/docs/en/plugins/manifest-reference#directory-listing-fields).
 
 ### Preparation verification — 2026-10-13
 
@@ -93,7 +98,7 @@ For the separate MCP App connector listing, prepare the carousel screenshots req
 
 The authorized publisher must answer the portal's data-handling questions from the service's actual practices and complete its legal/policy acknowledgments. This repository links the existing Paperpal service policies; it does not create new retention or deletion promises.
 
-Submit for review only after the portal validation and host checks are complete. A passing package is separate from a passing security scan, review approval, and publication. For later releases, update `version` and `CHANGELOG.md`, commit to the tracked branch, and follow the portal's version and publishing controls.
+Submit for review only after the portal validation and host checks are complete. Package validation, the security scan, review approval, and publication are separate gates. For later releases, update `version` and `CHANGELOG.md`, commit to the tracked branch, and follow the portal's version and publishing controls.
 
 ## Official references
 
