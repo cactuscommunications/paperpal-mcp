@@ -48,7 +48,7 @@ https://edit-connector.paperpal.com/mcp
 
 The host discovers Paperpal's OAuth authorization service and handles sign-in. This repository contains no credentials. Do not put an OAuth client secret, access token, password, or manuscript into the public plugin files or a GitHub issue.
 
-Files selected for a check are uploaded to Paperpal. The hosted service processes the requested checks, stores document/check-run records, and returns status and findings. Interactions such as opening reports and submitting feedback can create product-event or feedback records. The plugin itself consists of instructions and connection metadata; it does not run a local server, install dependencies, or execute hooks. See the [Privacy Policy](https://cactusglobal.com/privacy-policy/) and [Terms of Use](https://cactusglobal.com/terms-of-use/) for the service's policies.
+Files selected for a check are uploaded to Paperpal. The hosted service processes the requested checks, stores document/check-run records, and returns status and findings. Interactions such as opening reports and submitting feedback can create product-event or feedback records. The plugin itself consists of instructions and connection metadata; it does not run a local server, install dependencies, or execute hooks. See [Paperpal Data Security](https://paperpal.com/data-security) for its data-handling information and linked Privacy Policy, and the [Terms of Use](https://cactusglobal.com/terms-of-use/) for the service's terms.
 
 ## Validate or test from source
 
