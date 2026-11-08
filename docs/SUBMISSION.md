@@ -17,7 +17,9 @@ Open [Claude's developer portal](https://claude.ai/directory/manage), select **S
 
 Connect the GitHub account that has push access to the repository in the Claude organization that will own the listing. The repository is public. The portal reads listing fields from `.claude-plugin/plugin.json` and the description from `README.md`.
 
-The listing's `documentationUrl` points to the public [Paperpal MCP documentation](https://enormous-feeling-067.notion.site/Paperpal-MCP-3ec00a63965c8048a76be191ac93a7ca).
+The listing's `documentationUrl` points to the public [Paperpal MCP guide](https://paperpal.com/academy/guides/paperpal-mcp), `supportUrl` to the [Paperpal Help Center](https://support.paperpal.com/support/home), and `privacyPolicyUrl` to the [Paperpal Privacy Policy](https://paperpal.com/privacy-policy).
+
+The portal copies these listing details from `plugin.json` once, when the submission is created. Later commits do not update the submission's Listing tab, so change those links with the portal's **Edit** button as well as in `plugin.json`.
 
 Run **Validate** on the submitted commit and resolve any blocking findings. Local validation checks package structure. Directory name availability and the directory security scan require the portal's checks.
 
