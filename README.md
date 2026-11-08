@@ -1,8 +1,8 @@
-# Paperpal for Claude
+# Paperpal
 
 ![Paperpal](assets/paperpal.png)
 
-Check an academic manuscript with Paperpal from Claude, review the findings, and decide what needs attention before submission. This plugin combines four Paperpal skills with a connection to Paperpal's hosted MCP service. Each person signs in with their own Paperpal account.
+Check an academic manuscript with Paperpal from your AI assistant, review the findings, and decide what needs attention before submission. This plugin combines four Paperpal skills with a connection to Paperpal's hosted MCP service. Each person signs in with their own Paperpal account.
 
 ## What you can do
 
@@ -17,15 +17,17 @@ Upload a DOCX or PDF of up to 25 MB through the Paperpal card, choose the checks
 
 This connector supports these four checks. AI Detection, AI Review, literature search, rewriting, and other Paperpal web features are outside its current MCP scope.
 
-## Get started
+## Get started in Claude
 
-1. Add the Paperpal plugin in Claude and connect its Paperpal connector.
+The plugin is currently packaged in the Claude plugin format.
+
+1. Add the Paperpal plugin and connect its Paperpal connector.
 2. Complete the Paperpal sign-in and consent flow when prompted. A Paperpal account is required; available checks depend on its plan and balance.
 3. Ask, for example, **"Check my manuscript for plagiarism and reference issues."**
 4. Select the manuscript in the Paperpal upload card, choose the checks, and confirm.
 5. Once results are available, ask **"What should I fix first?"** or **"Refresh the Paperpal check status."** in the same conversation.
 
-When Claude cannot supply a downloadable chat attachment, Paperpal shows its upload card so you can select the file there. Do not provide a local file path, base64 content, or an invented download URL.
+When the assistant cannot supply a downloadable chat attachment, Paperpal shows its upload card so you can select the file there. Do not provide a local file path, base64 content, or an invented download URL.
 
 ## Included skills
 
@@ -36,7 +38,7 @@ When Claude cannot supply a downloadable chat attachment, Paperpal shows its upl
 | `manuscript-readiness` | Assess completed findings and prioritize issues without treating incomplete checks as approval. |
 | `paperpal-product-knowledge` | Explain Paperpal's MCP scope and route product questions to official sources. |
 
-The skills can be selected by Claude when relevant. In Claude Code, they also have namespaced commands such as `/paperpal:check-manuscript`.
+The assistant can select these skills when relevant. In Claude Code, they also have namespaced commands such as `/paperpal:check-manuscript`.
 
 ## Connection and data
 
@@ -59,7 +61,7 @@ claude plugin validate . --strict
 claude --plugin-dir .
 ```
 
-Local validation checks package structure. Authenticated tool calls and the interactive upload/results experience still need testing in the intended Claude app. Directory submission and release instructions are in [docs/SUBMISSION.md](docs/SUBMISSION.md).
+Local validation checks package structure. Authenticated tool calls and the interactive upload/results experience still need testing in the host app. Directory submission and release instructions are in [docs/SUBMISSION.md](docs/SUBMISSION.md).
 
 ## Help and license
 

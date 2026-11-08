@@ -19,7 +19,9 @@ Connect the GitHub account that has push access to the repository in the Claude 
 
 The listing's `documentationUrl` points to the public [Paperpal MCP guide](https://paperpal.com/academy/guides/paperpal-mcp), `supportUrl` to the [Paperpal Help Center](https://support.paperpal.com/support/home), and `privacyPolicyUrl` to the [Paperpal Privacy Policy](https://paperpal.com/privacy-policy).
 
-The portal copies these listing details from `plugin.json` once, when the submission is created. Later commits do not update the submission's Listing tab, so change those links with the portal's **Edit** button as well as in `plugin.json`.
+The portal copies these listing details from `plugin.json` once, when the submission is created. Later commits do not update the submission's Listing tab: the portal states that only the display name and short description follow the live version, and its Settings page can change only the tracked branch or tag.
+
+In the portal's Settings, turn on **This plugin collects or transmits user data**. The portal asks plugins that call remote MCP servers to answer yes and link a privacy policy; this plugin uploads manuscripts to the hosted Paperpal service.
 
 Run **Validate** on the submitted commit and resolve any blocking findings. Local validation checks package structure. Directory name availability and the directory security scan require the portal's checks.
 
